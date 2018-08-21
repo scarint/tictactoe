@@ -5,9 +5,115 @@
     xmlns:local="using:UWPTicTacToe"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    Width="700" Height="700">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="LayoutRoot" Background="#555555" Width="700" Height="700">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="175" />
+            <ColumnDefinition Width="175" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="175" />
+            <RowDefinition Height="175" />
+            <RowDefinition Height="175" />
+            <RowDefinition Height="175" />
+        </Grid.RowDefinitions>
 
+        <Border BorderBrush="Black" BorderThickness="0,0,5,5" Grid.Row="0" Grid.Column="0">
+            <Border x:Name="Box00Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="0" Grid.Column="0">
+                <TextBlock x:Name="Box00" Grid.Row="0" Grid.Column="0" Text="Box00" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,0,5,5" Grid.Row="0" Grid.Column="1">
+            <Border x:Name="Box01Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="0" Grid.Column="1">
+                <TextBlock x:Name="Box01"  Grid.Row="0" Grid.Column="1" Text="Box01" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,0,0,5" Grid.Row="0" Grid.Column="2">
+            <Border x:Name="Box02Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="0" Grid.Column="2">
+                <TextBlock x:Name="Box02"  Grid.Row="0" Grid.Column="1" Text="Box02" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="0,5,5,5" Grid.Row="1" Grid.Column="0">
+            <Border x:Name="Box10Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="1" Grid.Column="0">
+                <TextBlock x:Name="Box10" Grid.Row="1" Grid.Column="0" Text="Box10" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,5,5,5" Grid.Row="1" Grid.Column="1">
+            <Border x:Name="Box11Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="1" Grid.Column="1">
+                <TextBlock x:Name="Box11"  Grid.Row="1" Grid.Column="1" Text="Box11" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,5,0,5" Grid.Row="1" Grid.Column="2">
+            <Border x:Name="Box12Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="1" Grid.Column="2">
+                <TextBlock x:Name="Box12"  Grid.Row="1" Grid.Column="1" Text="Box12" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="0,5,5,0" Grid.Row="2" Grid.Column="0">
+            <Border x:Name="Box20Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="2" Grid.Column="0">
+                <TextBlock x:Name="Box20" Grid.Row="2" Grid.Column="0" Text="Box20" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,5,5,0" Grid.Row="2" Grid.Column="1">
+            <Border x:Name="Box21Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="2" Grid.Column="1">
+                <TextBlock x:Name="Box21"  Grid.Row="2" Grid.Column="1" Text="Box21" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="5,5,0,0" Grid.Row="2" Grid.Column="2">
+            <Border x:Name="Box22Border" BorderThickness="0,0,0,0" BorderBrush="Red" Grid.Row="2" Grid.Column="2">
+                <TextBlock x:Name="Box22"  Grid.Row="2" Grid.Column="1" Text="Box22" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   TextAlignment="Center"
+                   PointerReleased="BoxSelectionChanged" Height="175" Width="175" 
+                   Padding="10,80,10,10" />
+            </Border>
+        </Border>
+
+
+
+
+        <Button Content="Button" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="903,936,-968,-968" Grid.RowSpan="4" VerticalAlignment="Top"/>
     </Grid>
 </Page>
